@@ -1,5 +1,6 @@
 <template>
   <div class="introduce">
+    <!-- 个人主页 -->
     <!-- 登陆 -->
   	<div v-if="userInfo.isLogin">
   		<div class="my-intro">
@@ -58,7 +59,7 @@
   					<van-field label="密码" type="password" required clearable placeholder="请输入密码" v-model="loginPassword"/>
   				</van-cell-group>
   				<div>
-  					<van-button type="primary" size="large" @click="loginHandler">登陆</van-button>
+  					<van-button type="danger" size="large" @click="loginHandler">登陆</van-button>
   				</div>
   			</van-tab>
   			<van-tab title="注册">
@@ -68,7 +69,7 @@
             <van-field label="确认密码" type="password" required clearable placeholder="请再次输入密码" v-model="againPassword"/>
   				</van-cell-group>
   				<div>
-  					<van-button type="primary" size="large" @click="registHandler">注册</van-button>
+  					<van-button type="danger" size="large" @click="registHandler">注册</van-button>
   				</div>
   			</van-tab>
 		  </van-tabs>
@@ -78,7 +79,6 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
 import axios from 'axios';
 import url from '@/service.config.js';
 import { ImagePreview } from 'vant';
@@ -88,7 +88,6 @@ import { mapState } from 'vuex';
 export default {
   	name: 'introduce',
   	components: {
-    	HelloWorld
   	},
   	data() {
     	return {
@@ -383,11 +382,11 @@ export default {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #f1f1f1;
+  background-color: #f8f8f8;
 }
 .my-intro {
   background-color: #fff;
-  border-top: 1px solid #f1f1f1;
+  /* border-top: 1px solid #f1f1f1; */
   padding: 0.3rem;
   display: flex;
 }

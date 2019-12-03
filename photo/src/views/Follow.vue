@@ -48,7 +48,7 @@
                   <textarea  id='inputVal' style="vertical-align: middle;" cols="25" rows="5" placeholder="请输入你的评论..." v-model="comText"></textarea>
                 </div>
                 <div class="components-btn">
-                  <van-button type="primary" size="large" @click="submitComment">提交评论</van-button>
+                  <van-button size="large"  type="danger" @click="submitComment">提交评论</van-button>
                 </div>
               </div>
             </div>
@@ -545,7 +545,7 @@ export default {
   margin: 0.1rem 0; 
 }
 .follow-comment {
-  background: #f1f1f1;
+  background: #f8f8f8;
   padding: 0.3rem;
   margin-bottom: 0.44rem;
 }

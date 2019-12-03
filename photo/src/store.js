@@ -8,7 +8,7 @@ export default new Vuex.Store({
   	userInfo: JSON.parse(sessionStorage.getItem("userInfo")) ||
     {
   		isLogin:  false,
-  		userName:  '毕设',
+  		userName:  '小苏同学の毕业设计',
       userId: '',
   	}
   },

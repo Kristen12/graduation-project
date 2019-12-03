@@ -1,5 +1,4 @@
-const SERVERURL = 'http://172.20.10.13:3000/';
-// const SERVERURL = 'http://192.168.0.106:3000/';
+const SERVERURL = 'http://12.23.26.67:3000/';
 
 const URL = {
 	// 注册
@@ -43,6 +42,9 @@ const URL = {
 
 	// 粉丝
 	followedNum: SERVERURL + 'user/followedNum',
+	
+	// 聊天列表
+	getMsgList: SERVERURL + 'chat/getMsgList',
 };
 
 export default URL;

@@ -2,7 +2,7 @@
   	<div class="upload">
 	  	<div class="upload-content">
 	  		<p class="upload-title">图片</p>
-	    	<van-uploader class="upload-img-box" :after-read="onRead" :max-size="204800" accept="image/jpeg,image/png,image/jpg" multiple>
+	    	<van-uploader class="upload-img-box" :after-read="onRead" :max-size="2097152" accept="image/jpeg,image/png,image/jpg" multiple>
 	    		<img id="uploadImg" class="upload-img" :src="imgcontent" ref="goodsImg"/>
 			</van-uploader>
 		</div>
@@ -11,7 +11,7 @@
 	  		<textarea style="vertical-align: middle;" cols="35" rows="5" placeholder="请输入（可选）" v-model="picText"></textarea>
 		</div>
 		<div class="upload-btn">
-			<van-button type="primary" size="large" @click="savePic">上传作品</van-button>
+			<van-button type="danger" size="large" @click="savePic">上传作品</van-button>
 		</div>
   	</div>
 </template>
@@ -89,7 +89,7 @@ export default {
 .upload {
     position: absolute;
     width: 100%;
-    background-color: #f1f1f1;
+    background-color: #f8f8f8;
     height: 100%;
 }
 .upload-content {
@@ -123,6 +123,7 @@ export default {
   font-size: .14rem;
 }
 .upload-btn {
+	width: 60%;
 	margin: 0.35rem auto;
 	padding-bottom: 0.44rem; 
 }

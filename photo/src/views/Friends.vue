@@ -1,8 +1,10 @@
 <template>
   <div class="friends">
+    <!-- 他人主页 -->
   	<div class="friends-intro">
       <div class="friends-left">
         <img class="user-img" :src='userhead'/>
+      <div class="user-chat" @click="goChat">聊天</div>
       </div>
       <div class="friends-right">
         <p class="user-name-one">{{ username }}</p>
@@ -182,6 +184,10 @@ export default {
         this.$router.push('/follow?userid=' + encodeURI(this.userid) + '&picid=' + encodeURI(item._id));
       },
 
+      goChat() {
+        this.$router.push('/chat?userid=' + encodeURI(this.userid));
+      },
+
       myInto() {
         axios({
           url: url.userInto,
@@ -284,13 +290,14 @@ export default {
 }
 .friends-intro {
   background-color: #fff;
-  border-top: 1px solid #f1f1f1;
+  /* border-top: 1px solid #f1f1f1; */
   padding: 0.3rem;
   display: flex;
 }
 .friends-left {
   flex-grow: 1;
   width: 0;
+  position: relative;
 }
 .user-img {
   border-radius: 50%;
@@ -298,6 +305,18 @@ export default {
   height: 0.8rem;
   display: inline-block;
   margin-top: 0.2rem;
+}
+.user-chat {
+  width: 0.8rem;
+  text-align: center;
+  /* margin-top: 0.2rem; */
+  position: absolute;
+  bottom: 0;
+  background-color: #ff4444;
+  height: 0.3rem;
+  border-radius: 8px;
+  line-height: 0.3rem;
+  color: #fff;
 }
 .friends-right {
   flex-grow: 1;

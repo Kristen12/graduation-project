@@ -8,6 +8,7 @@ import Friends from './views/Friends.vue'
 import Edit from './views/Useredit.vue'
 import List from './views/Followlist.vue'
 import Followerlist from './views/Followerlist.vue'
+import Chat from './views/Chat.vue'
 
 Vue.use(Router)
 
@@ -67,6 +68,11 @@ export default new Router({
       path: '/followerlist',
       name: 'followerlist',
       component: Followerlist
+    },
+    {
+      path: '/chat',
+      name: 'chat',
+      component: Chat
     },
   ]
 })

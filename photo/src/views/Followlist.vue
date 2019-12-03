@@ -1,5 +1,6 @@
 <template>
   <div class="list">
+    <!-- 关注列表 -->
   	<van-list
       class="list-content"
       v-model="loading"
@@ -13,7 +14,8 @@
         :key="item.id"
         @click="cellClick(item)">
         <img :src='item.userHead'/>
-        <span>{{ item.userName }}</span>
+        <div class="userName">{{ item.userName }}</div>
+        <!-- <div class="chat">聊天</div> -->
       </van-cell>
     </van-list>
   </div>
@@ -113,10 +115,21 @@ export default {
   margin-bottom:0.44rem;
   border-top: 1px solid #f1f1f1;
 }
+.list-cell{
+  line-height: 0.4rem;
+  height: 0.6rem;
+}
 .list-cell img {
   width: 0.4rem;
   height: 0.4rem;
   border-radius: 50%;
   margin-right: 0.3rem;
+}
+.list-cell div {
+  display: inline-block;
+  position: absolute;
+}
+.chat {
+  right: 0
 }
 </style>
